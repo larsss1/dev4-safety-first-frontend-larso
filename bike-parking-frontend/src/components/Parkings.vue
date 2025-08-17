@@ -29,7 +29,6 @@
 				type="number"
 			/>
 
-			<!-- IMPORTANT: use booleans, not strings -->
 			<select v-model="newParking.coveredOrOpenAir" required>
 				<option :value="true">Covered</option>
 				<option :value="false">Open Air</option>

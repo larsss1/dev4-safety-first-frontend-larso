@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Parkings from "../src/components/Parkings.vue";
 import ParkingPage from "../src/components/ParkingPage.vue";
-import ParkingHystory from "../src/components/ParkingHistory.vue";
+import Bikes from "./components/Bikes.vue";
 
 const router = createRouter({
 	history: createWebHistory(import.meta.env.BASE_URL),
@@ -9,7 +9,8 @@ const router = createRouter({
 		{ path: "/", redirect: "/parkings" },
 		{ path: "/parkings", component: Parkings },
 		{ path: "/parkings/:id", component: ParkingPage, props: true },
-		{ path: "/history", component: ParkingHystory },
+		{ path: "/bikes", component: Bikes },
+		{ path: "/bikes/:id", component: Bikes, props: true },
 	],
 });
 

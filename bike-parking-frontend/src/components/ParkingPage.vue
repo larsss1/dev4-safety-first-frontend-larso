@@ -1,7 +1,7 @@
 <template>
 	<div>
-		<h1>Parking Page</h1>
-		<p>This is a test template for the Parking Page.</p>
+		<h1> Parking History</h1>
+		<p>This is a test template for the parkings Page.</p>
 	</div>
 </template>
 
