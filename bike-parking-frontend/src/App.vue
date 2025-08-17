@@ -1,30 +1,48 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+	<div class="container">
+		<header
+			style="
+				display: flex;
+				gap: 12px;
+				align-items: center;
+				justify-content: space-between;
+			"
+		>
+			<h1>Brussels Bike Parkings</h1>
+			<nav style="display: flex; gap: 10px">
+				<router-link to="/parkings">Parkings</router-link>
+				<router-link to="/history">History</router-link>
+			</nav>
+		</header>
+		<hr />
+		<router-view />
+	</div>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+<style>
+.container {
+	max-width: 900px;
+	margin: 24px auto;
+	padding: 0 12px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+a.router-link-active {
+	font-weight: 700;
+	text-decoration: underline;
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+input,
+select,
+button {
+	padding: 6px 10px;
+}
+.card {
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	padding: 12px;
+	margin-bottom: 10px;
+}
+.row {
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
 }
 </style>
