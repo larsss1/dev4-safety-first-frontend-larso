@@ -48,6 +48,7 @@
 			<li v-for="(parking, i) in parkings" :key="parking.id ?? i">
 				<div v-if="editId !== (parking.id ?? i)">
 					<strong>{{ parking.name }}</strong> — {{ parking.location }}<br />
+					id : {{ parking.id }}<br />
 					Capacity: {{ parking.capacity }}<br />
 					Safety: {{ parking.safetyMeasures || "N/A" }}<br />
 					24/7: {{ parking.access247 ? "Yes" : "No" }}<br />
@@ -55,6 +56,7 @@
 					Type: {{ parking.coveredOrOpenAir ? "Covered" : "Open Air" }}<br />
 					<button @click="startEdit(parking, i)">Edit</button>
 					<button @click="handleDelete(parking.id ?? i)">Delete</button>
+					<button @click="$router.push(`/parkings/${parking.id}`)">Open</button>
 				</div>
 
 				<div v-else>

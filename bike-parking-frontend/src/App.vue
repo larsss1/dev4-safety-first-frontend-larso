@@ -9,10 +9,10 @@
 			"
 		>
 			<h1>Brussels Bike Parkings</h1>
-			<nav style="display: flex; gap: 10px">
+			<!-- <nav style="display: flex; gap: 10px">
 				<router-link to="/parkings">Parkings</router-link>
 				<router-link to="/bikes">bikes</router-link>
-			</nav>
+			</nav> -->
 		</header>
 		<hr />
 		<router-view />
